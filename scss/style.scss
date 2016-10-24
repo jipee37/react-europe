@@ -1,0 +1,76 @@
+// Fonts
+$primaryFont: "Roboto";
+
+// Colors
+$gray: #f9f9f9;
+$banner_bg_color_1: #0d8d99;
+$banner_bg_color_2: #0d7299;
+$banner_bg_color_3: #0d5b99;
+$linear_light_blue: #2395a2;
+$light_blue: #82c4ca;
+
+
+// Reset
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1040px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+//Main style
+
+body {
+    font-family: $primaryFont, Arial, sans-serif;
+    background-color: $gray;
+}
+
+// Banner
+
+
+.banner{
+    background-color: $banner_bg_color_1;
+    background-image: linear-gradient(
+        $banner_bg_color_1 , 
+        $banner_bg_color_2 60%,
+        $banner_bg_color_3 
+    );
+    
+    #top_header {
+        padding: .7em 0;
+        border-bottom: 1px solid $linear_light_blue;
+              
+        a {
+            font-size: 1.1em;
+            color: $light_blue;
+            text-decoration: none; 
+            
+            &.brand {
+                float: left;
+                font-weight: 600;
+            }
+            span {
+                border: 2px solid $light_blue;
+                border-radius: 100%;
+                display: inline-block;
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+                font-weight: 400;
+                text-align: center;
+                margin-right: .3em;     
+            }
+            
+            &.back_button {
+                float: right;
+                margin-top: 1em;    
+            }   
+            
+          }
+        .clearfix {clear:  both;}       
+    }
+        
+}

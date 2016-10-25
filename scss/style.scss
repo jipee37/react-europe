@@ -3,12 +3,15 @@ $primaryFont: "Roboto";
 
 // Colors
 $gray: #f9f9f9;
+$light_grey: #c4e4db;
 $banner_bg_color_1: #0d8d99;
 $banner_bg_color_2: #0d7299;
 $banner_bg_color_3: #0d5b99;
 $linear_light_blue: #2395a2;
 $light_blue: #82c4ca;
-
+$white: #fff;
+$blue: #0576a0;
+$green: #2b647b;
 
 // Reset
 * {
@@ -16,7 +19,7 @@ $light_blue: #82c4ca;
 }
 
 .wrapper {
-    width: 1040px;
+    width: 1040px;   //largeur à fixer pour contenir tous les éléments après le #top_header.
     max-width: 90%;
     margin: 0 auto;
 }
@@ -39,6 +42,7 @@ body {
         $banner_bg_color_3 
     );
     
+   
     #top_header {
         padding: .7em 0;
         border-bottom: 1px solid $linear_light_blue;
@@ -47,21 +51,31 @@ body {
             font-size: 1.1em;
             color: $light_blue;
             text-decoration: none; 
+             
             
             &.brand {
                 float: left;
                 font-weight: 600;
-            }
-            span {
-                border: 2px solid $light_blue;
-                border-radius: 100%;
-                display: inline-block;
-                width: 46px;
-                height: 46px;
-                line-height: 46px;
-                font-weight: 400;
-                text-align: center;
-                margin-right: .3em;     
+                transition: transform 0.5s ease-in-out;
+            
+            
+                span {
+                    border: 2px solid $light_blue;
+                    border-radius: 100%;
+                    display: inline-block;
+                    width: 46px;
+                    height: 46px;
+                    line-height: 46px;
+                    font-weight: 400;
+                    text-align: center;
+                    margin-right: .3em;     
+                }
+            
+                &:hover {
+                color: $white;
+                transform: scale(1.1, 1.1);
+                
+                }
             }
             
             &.back_button {
@@ -70,7 +84,104 @@ body {
             }   
             
           }
+        
         .clearfix {clear:  both;}       
     }
+    
+    
+    .jumbotron {
         
+        padding: 3.5em 0 0 0;
+        text-align: center;
+        color: $white;
+    
+    
+        .logo {
+            width: 70px;
+            height: 70px;
+        }
+        
+        
+        h1 {
+            font-size: 2.5em; 
+            margin: 0.3em 0;    
+        }
+        
+        
+        p {
+            width: 650px;
+            margin: 0 auto;
+            max-width: 70%;
+            line-height: 1.5;
+            font-size: 1.1em;
+            font-weight: 300; //diminution
+            color: $light_grey;
+            padding: 0.4em 0 2em 0;
+        }
+    
+        
+        .download_buttons {
+            
+            .button {        //lien
+                 background-color: $light_grey;
+                 color: $blue;
+                 text-decoration: none;
+                 padding: 0.6em 1.7em;
+                 display: inline-block;
+                 min-width: 200px;
+                 max-width: 100%; //maintien des éléments au niveau du bloc div
+                 font-size: 1.1em;
+                 border-radius: 4px;
+                 margin-right: 1.3em;
+             
+                 i {
+                 color: $blue;
+                 float: left; 
+                 margin-right: .3em;
+                 }
+                 
+                  span {
+                  float: left;
+                  margin-top: .5em;   
+                  }
+                 
+                 &:hover {
+                     background-color: $white;    
+                 }              
+             }    
+        }
+        
+        .mobile_apps {
+            margin: 4em 0 0 0;    
+         
+            p {
+               font-size: 0.9em;
+               font-weight: 400px;     
+            }
+    
+            .button { //lien
+                display: inline-block;
+                width: 180px;
+                height: auto;
+                background-color: $green;
+                text-decoration: none; 
+                border-radius: 8px;
+            
+                 &:hover {
+                background-color: darken($green, 4%);
+                }
+        
+                img {
+                    width: 100%; /*inclusion dans lien <a>: adaptation des dimensions de l'image à la largeur du bloc                                    ici 180px*/
+                    max-width: 100%; //limite indépassable.      
+                }     
+            }
+    
+            .apps_preview {           //classe appliquée à l'image contenue dans un paragraphe.      
+                    padding-top: 2em;
+                    max-width: 90%; //l'image occupera 90% de la largeur dispo (paragraphe calqué sur le précédent) avec redim auto hauteur.
+                    margin-bottom: -15em; //l'image peut sortir du bloc parent (valeur négative).
+            }   
+        }    
+    }       
 }

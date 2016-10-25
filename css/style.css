@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -23,21 +24,89 @@ body {
       text-decoration: none; }
       .banner #top_header a.brand {
         float: left;
-        font-weight: 600; }
-      .banner #top_header a span {
-        border: 2px solid #82c4ca;
-        border-radius: 100%;
-        display: inline-block;
-        width: 46px;
-        height: 46px;
-        line-height: 46px;
-        font-weight: 400;
-        text-align: center;
-        margin-right: .3em; }
+        font-weight: 600;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+                transition: transform 0.5s ease-in-out; }
+        .banner #top_header a.brand span {
+          border: 2px solid #82c4ca;
+          border-radius: 100%;
+          display: inline-block;
+          width: 46px;
+          height: 46px;
+          line-height: 46px;
+          font-weight: 400;
+          text-align: center;
+          margin-right: .3em; }
+        .banner #top_header a.brand:hover {
+          color: #fff;
+          -webkit-transform: scale(1.1, 1.1);
+              -ms-transform: scale(1.1, 1.1);
+                  transform: scale(1.1, 1.1); }
       .banner #top_header a.back_button {
         float: right;
         margin-top: 1em; }
     .banner #top_header .clearfix {
       clear: both; }
+  .banner .jumbotron {
+    padding: 3.5em 0 0 0;
+    text-align: center;
+    color: #fff; }
+    .banner .jumbotron .logo {
+      width: 70px;
+      height: 70px; }
+    .banner .jumbotron h1 {
+      font-size: 2.5em;
+      margin: 0.3em 0; }
+    .banner .jumbotron p {
+      width: 650px;
+      margin: 0 auto;
+      max-width: 70%;
+      line-height: 1.5;
+      font-size: 1.1em;
+      font-weight: 300;
+      color: #c4e4db;
+      padding: 0.4em 0 2em 0; }
+    .banner .jumbotron .download_buttons .button {
+      background-color: #c4e4db;
+      color: #0576a0;
+      text-decoration: none;
+      padding: 0.6em 1.7em;
+      display: inline-block;
+      min-width: 200px;
+      max-width: 100%;
+      font-size: 1.1em;
+      border-radius: 4px;
+      margin-right: 1.3em; }
+      .banner .jumbotron .download_buttons .button i {
+        color: #0576a0;
+        float: left;
+        margin-right: .3em; }
+      .banner .jumbotron .download_buttons .button span {
+        float: left;
+        margin-top: .5em; }
+      .banner .jumbotron .download_buttons .button:hover {
+        background-color: #fff; }
+    .banner .jumbotron .mobile_apps {
+      margin: 4em 0 0 0; }
+      .banner .jumbotron .mobile_apps p {
+        font-size: 0.9em;
+        font-weight: 400px; }
+      .banner .jumbotron .mobile_apps .button {
+        display: inline-block;
+        width: 180px;
+        height: auto;
+        background-color: #2b647b;
+        text-decoration: none;
+        border-radius: 8px; }
+        .banner .jumbotron .mobile_apps .button:hover {
+          background-color: #26586c; }
+        .banner .jumbotron .mobile_apps .button img {
+          width: 100%;
+          /*inclusion dans lien <a>: adaptation des dimensions de l'image ├á la largeur du bloc                                    ici 180px*/
+          max-width: 100%; }
+      .banner .jumbotron .mobile_apps .apps_preview {
+        padding-top: 2em;
+        max-width: 90%;
+        margin-bottom: -15em; }
 
 /*# sourceMappingURL=style.css.map */

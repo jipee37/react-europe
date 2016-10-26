@@ -9,9 +9,11 @@ $banner_bg_color_2: #0d7299;
 $banner_bg_color_3: #0d5b99;
 $linear_light_blue: #2395a2;
 $light_blue: #82c4ca;
+$black: #555;
 $white: #fff;
 $blue: #0576a0;
 $green: #2b647b;
+$slight-grey :#888;
 
 // Reset
 * {
@@ -31,34 +33,33 @@ body {
     background-color: $gray;
 }
 
-// Banner
+// Banner first section
 
-
-.banner{
-    background-color: $banner_bg_color_1;
-    background-image: linear-gradient(
-        $banner_bg_color_1 , 
+.banner {
+   background-color: $banner_bg_color_1;
+   background-image: linear-gradient(
+        $banner_bg_color_1 ,
         $banner_bg_color_2 60%,
-        $banner_bg_color_3 
+        $banner_bg_color_3
     );
-    
-   
+    margin-bottom: 7em; //replace 1er paragraphe 2è section
+
     #top_header {
         padding: .7em 0;
         border-bottom: 1px solid $linear_light_blue;
-              
+
         a {
             font-size: 1.1em;
             color: $light_blue;
-            text-decoration: none; 
-             
-            
+            text-decoration: none;
+
+
             &.brand {
                 float: left;
                 font-weight: 600;
                 transition: transform 0.5s ease-in-out;
-            
-            
+
+
                 span {
                     border: 2px solid $light_blue;
                     border-radius: 100%;
@@ -68,46 +69,46 @@ body {
                     line-height: 46px;
                     font-weight: 400;
                     text-align: center;
-                    margin-right: .3em;     
+                    margin-right: .3em;
                 }
-            
+
                 &:hover {
                 color: $white;
                 transform: scale(1.1, 1.1);
-                
+
                 }
             }
-            
+
             &.back_button {
                 float: right;
-                margin-top: 1em;    
-            }   
-            
+                margin-top: 1em;
+            }
+
           }
-        
-        .clearfix {clear:  both;}       
+
+        .clearfix {clear:  both;}
     }
-    
-    
+
+
     .jumbotron {
-        
+
         padding: 3.5em 0 0 0;
         text-align: center;
         color: $white;
-    
-    
+
+
         .logo {
             width: 70px;
             height: 70px;
         }
-        
-        
+
+
         h1 {
-            font-size: 2.5em; 
-            margin: 0.3em 0;    
+            font-size: 2.5em;
+            margin: 0.3em 0;
         }
-        
-        
+
+
         p {
             width: 650px;
             margin: 0 auto;
@@ -118,10 +119,10 @@ body {
             color: $light_grey;
             padding: 0.4em 0 2em 0;
         }
-    
-        
+
+
         .download_buttons {
-            
+
             .button {        //lien
                  background-color: $light_grey;
                  color: $blue;
@@ -133,55 +134,115 @@ body {
                  font-size: 1.1em;
                  border-radius: 4px;
                  margin-right: 1.3em;
-             
+
                  i {
                  color: $blue;
-                 float: left; 
+                 float: left;
                  margin-right: .3em;
                  }
-                 
+
                   span {
                   float: left;
-                  margin-top: .5em;   
+                  margin-top: .5em;
                   }
-                 
+
                  &:hover {
-                     background-color: $white;    
-                 }              
-             }    
+                     background-color: $white;
+                 }
+             }
         }
-        
+
         .mobile_apps {
-            margin: 4em 0 0 0;    
-         
+            margin: 4em 0 0 0;
+
             p {
                font-size: 0.9em;
-               font-weight: 400px;     
+               font-weight: 400;
             }
-    
+
             .button { //lien
                 display: inline-block;
                 width: 180px;
                 height: auto;
                 background-color: $green;
-                text-decoration: none; 
+                text-decoration: none;
                 border-radius: 8px;
-            
+
                  &:hover {
                 background-color: darken($green, 4%);
                 }
-        
+
                 img {
                     width: 100%; /*inclusion dans lien <a>: adaptation des dimensions de l'image à la largeur du bloc                                    ici 180px*/
-                    max-width: 100%; //limite indépassable.      
-                }     
+                    max-width: 100%; //limite indépassable.
+                }
             }
-    
-            .apps_preview {           //classe appliquée à l'image contenue dans un paragraphe.      
+
+            .apps_preview {           //classe appliquée à l'image contenue dans un paragraphe.
                     padding-top: 2em;
                     max-width: 90%; //l'image occupera 90% de la largeur dispo (paragraphe calqué sur le précédent) avec redim auto hauteur.
                     margin-bottom: -15em; //l'image peut sortir du bloc parent (valeur négative).
-            }   
-        }    
-    }       
+            }
+        }
+    }
+}
+
+
+// Tools
+.tools {
+    h3{
+        font-size: 2em;
+        font-weight: 400;
+        color: $slight-grey;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+
+        li {
+            width: 23%; //4 images à répartir sur 1040px soit 25% init
+            text-align: center; //aligne les contenus img, h4 et p après stylisations
+            float: left; //alignement "final"
+            margin-right: 2%; //+ léger espace entre éléments: 260 -(1040 * 27%) = 20.8px
+
+            &:last-child {
+                margin-right: 0; //dernier élément passé ligne suivante: width de 25 à 23% !!
+            }
+
+            a {
+                color: $black;
+                text-decoration: none;
+
+                img {
+                    width: 40%; //reduction taille images
+                    max-width: 100%; //inclusion images dans le bloc <li>
+                    margin: 0; //for fun
+                    padding: 0;
+                }
+
+                h4 {
+                    font-weight: 400;
+                    color: $slight-grey;
+                    font-size: 1.4em;
+                    margin: .5em 0 .3em 0; //réduc espaces sup et inf
+                }
+
+                p {
+                    color: #222;
+                    max-width: 80%; //réajuste le texte sur 2 lignes.
+                    margin: .8em auto;
+                }
+
+            }
+
+
+
+        }
+
+    }
 }

@@ -84,7 +84,7 @@ body {
                 margin-top: 1em;
             }
 
-          }
+        }
 
         .clearfix {clear:  both;}
     }
@@ -158,6 +158,7 @@ body {
             p {
                font-size: 0.9em;
                font-weight: 400;
+               padding-bottom: 0.9em;
             }
 
             .button { //lien
@@ -167,6 +168,7 @@ body {
                 background-color: $green;
                 text-decoration: none;
                 border-radius: 8px;
+                margin-right: .3em;
 
                  &:hover {
                 background-color: darken($green, 4%);
@@ -187,28 +189,33 @@ body {
     }
 }
 
+.tools h3, .team h3 {     //stylisation analogue
+    font-size: 2em;
+    font-weight: 400;
+    color: $slight-grey;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
 
 // Tools
 .tools {
-    h3{
-        font-size: 2em;
-        font-weight: 400;
-        color: $slight-grey;
-        text-align: center;
-        margin-bottom: 2em;
-    }
+
+    margin-bottom: 2em; //possible après clear: both
 
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
+        padding-bottom: 2em;
+        border-bottom: 1px solid #eaeaea;
 
 
         li {
             width: 23%; //4 images à répartir sur 1040px soit 25% init
             text-align: center; //aligne les contenus img, h4 et p après stylisations
             float: left; //alignement "final"
-            margin-right: 2%; //+ léger espace entre éléments: 260 -(1040 * 27%) = 20.8px
+            margin-right: 2%; //+ léger espace entre éléments: 1040(27% - 25%) = 20.8px
 
             &:last-child {
                 margin-right: 0; //dernier élément passé ligne suivante: width de 25 à 23% !!
@@ -240,9 +247,9 @@ body {
 
             }
 
-
-
         }
 
     }
+    .clearfix {clear:both;}
 }
+

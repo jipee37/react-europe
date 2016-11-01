@@ -201,7 +201,7 @@ body {
 // Tools
 .tools {
 
-    margin-bottom: 2em; //possible après clear: both
+    margin-bottom: 4em; //possible après clear: both
 
     ul {
         list-style: none;
@@ -248,8 +248,45 @@ body {
             }
 
         }
-
+        .clearfix: {clear:both}; //pour appliquer border-bottom: 1px solid #eaeaea;
     }
     .clearfix {clear:both;}
 }
 
+// Team
+
+.team {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            width: 12.5%;
+            float: left;
+            text-align: center;
+
+           img {
+               width: 65%;
+               min-width: 100px;
+               min-height: 100px;
+               border-radius: 100%;
+               box-shadow: 0 9px 100px rgba(0, 0, 0, .2);
+           }
+
+
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+    .clearfix {clear:both;}
+}
+
+footer {
+    text-align: center;
+    color: $slight_grey;
+    font-weight: 700;
+    margin: 5em 0 1em 0;
+}

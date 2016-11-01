@@ -120,13 +120,14 @@ body {
   margin-bottom: 2em; }
 
 .tools {
-  margin-bottom: 2em; }
+  margin-bottom: 4em; }
   .tools ul {
     list-style: none;
     margin: 0;
     padding: 0;
     padding-bottom: 2em;
-    border-bottom: 1px solid #eaeaea; }
+    border-bottom: 1px solid #eaeaea;
+    .clearfix-clear: both; }
     .tools ul li {
       width: 23%;
       text-align: center;
@@ -153,5 +154,30 @@ body {
           margin: .8em auto; }
   .tools .clearfix {
     clear: both; }
+
+.team ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .team ul li {
+    width: 12.5%;
+    float: left;
+    text-align: center; }
+    .team ul li img {
+      width: 65%;
+      min-width: 100px;
+      min-height: 100px;
+      border-radius: 100%;
+      box-shadow: 0 9px 100px rgba(0, 0, 0, 0.2); }
+    .team ul li p {
+      font-size: .9em; }
+.team .clearfix {
+  clear: both; }
+
+footer {
+  text-align: center;
+  color: #888;
+  font-weight: 700;
+  margin: 5em 0 1em 0; }
 
 /*# sourceMappingURL=style.css.map */

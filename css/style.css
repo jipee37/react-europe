@@ -105,7 +105,7 @@ body {
           background-color: #26586c; }
         .banner .jumbotron .mobile_apps .button img {
           width: 100%;
-          /*inclusion dans lien <a>: adaptation des dimensions de l'image ├á la largeur du bloc                                    ici 180px*/
+          /*inclusion dans lien <a>: adaptation des dimensions de l'image à la largeur du bloc                                    ici 180px*/
           max-width: 100%; }
       .banner .jumbotron .mobile_apps .apps_preview {
         padding-top: 2em;
@@ -179,5 +179,16 @@ footer {
   color: #888;
   font-weight: 700;
   margin: 5em 0 1em 0; }
+
+@media screen and (max-width: 768px) {
+  .tools .wrapper h3 {
+    margin-bottom: 1em; }
+  .tools .wrapper li:first-child, .tools .wrapper li:nth-child(2), .tools .wrapper li:nth-child(3), .tools .wrapper li:nth-child(4) {
+    width: 48%;
+    padding-bottom: 0.5em; }
+    .tools .wrapper li:first-child img, .tools .wrapper li:nth-child(2) img, .tools .wrapper li:nth-child(3) img, .tools .wrapper li:nth-child(4) img {
+      width: 20%; }
+    .tools .wrapper li:first-child p, .tools .wrapper li:nth-child(2) p, .tools .wrapper li:nth-child(3) p, .tools .wrapper li:nth-child(4) p {
+      margin-top: 0; } }
 
 /*# sourceMappingURL=style.css.map */
